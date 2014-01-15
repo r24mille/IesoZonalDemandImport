@@ -1,0 +1,22 @@
+CREATE TABLE `zonal_demand` (
+  `zonal_demand_id` int(11) NOT NULL AUTO_INCREMENT,
+  `demand_datetime_dst` datetime NOT NULL,
+  `demand_datetime_standard` datetime NOT NULL,
+  `demand_timezone` varchar(3) NOT NULL DEFAULT 'EST',
+  `hour` int(11) NOT NULL,
+  `total_ontario` decimal(10,0) DEFAULT NULL,
+  `total_zones` decimal(10,0) DEFAULT NULL,
+  `difference` decimal(10,0) DEFAULT NULL,
+  `northwest` decimal(10,0) DEFAULT NULL,
+  `northeast` decimal(10,0) DEFAULT NULL,
+  `ottawa` decimal(10,0) DEFAULT NULL,
+  `east` decimal(10,0) DEFAULT NULL,
+  `toronto` decimal(10,0) DEFAULT NULL,
+  `essa` decimal(10,0) DEFAULT NULL,
+  `bruce` decimal(10,0) DEFAULT NULL,
+  `southwest` decimal(10,0) DEFAULT NULL,
+  `niagara` decimal(10,0) DEFAULT NULL,
+  `west` decimal(10,0) DEFAULT NULL,
+  PRIMARY KEY (`zonal_demand_id`),
+  UNIQUE KEY `observation_datetime_UNIQUE` (`demand_datetime_standard`)
+) ENGINE=InnoDB AUTO_INCREMENT=217160 DEFAULT CHARSET=latin1;
